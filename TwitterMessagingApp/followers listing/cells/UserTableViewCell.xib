@@ -19,26 +19,27 @@
                 <rect key="frame" x="0.0" y="0.0" width="312" height="67.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7iY-c7-4oj">
-                        <rect key="frame" x="10" y="10" width="292" height="47.5"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="7iY-c7-4oj">
+                        <rect key="frame" x="10" y="10.5" width="292" height="50"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RMz-rp-MUU">
-                                <rect key="frame" x="0.0" y="0.0" width="47.5" height="47.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hd1-6S-Bpl"/>
                                     <constraint firstAttribute="width" secondItem="RMz-rp-MUU" secondAttribute="height" id="z0g-bQ-9Xw"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xzP-02-s3p">
-                                <rect key="frame" x="55.5" y="1" width="236.5" height="46"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="xzP-02-s3p">
+                                <rect key="frame" x="65" y="3" width="227" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="291-xj-xrM">
-                                        <rect key="frame" x="0.0" y="0.0" width="236.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="227" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFe-nc-Ean">
-                                        <rect key="frame" x="0.0" y="25.5" width="236.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="23.5" width="227" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -56,6 +57,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameLabel" destination="291-xj-xrM" id="aqN-v4-c89"/>
+                <outlet property="screenNameLabel" destination="cFe-nc-Ean" id="bfS-qc-Xn6"/>
+                <outlet property="userImageView" destination="RMz-rp-MUU" id="Sab-oG-Ddx"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="87.723214285714278"/>
         </tableViewCell>
     </objects>

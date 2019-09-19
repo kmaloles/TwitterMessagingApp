@@ -22,9 +22,7 @@ class ViewController: UIViewController {
     @IBAction func onAuthenticateTapped(_ sender: Any) {
         twitterManager.login { success in
             if success {
-                self.twitterManager.getFollowers(){
-                    print($0)
-                }
+                self.present(FollowersListingViewController.storyboardInstance(), animated: true, completion: nil)
             }else{
                 debugPrint("login failed")
             }
@@ -35,8 +33,10 @@ class ViewController: UIViewController {
     
     @IBAction func onRetrieveTapped(_ sender: Any) {
         twitterManager.getFollowers(){
-            print("Count: \($0.count)")
-            print($0)
+            guard $0.count > 0 else {
+                return
+            }
+            self.present(FollowersListingViewController.storyboardInstance(), animated: true, completion: nil)
         }
     }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sRL-ng-F15">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,20 +10,50 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Followers Listing View Controller-->
         <scene sceneID="Kad-Bv-i0Q">
             <objects>
-                <viewController id="sRL-ng-F15" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FollowersListingViewController" id="sRL-ng-F15" customClass="FollowersListingViewController" customModule="TwitterMessagingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i1o-yw-UqL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="454-yU-7wY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="sRL-ng-F15" id="2uV-ac-d6u"/>
+                                    <outlet property="delegate" destination="sRL-ng-F15" id="e1T-9y-dFT"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmp-Uu-1ix">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="a9d-lH-wtE"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wmp-Uu-1ix" firstAttribute="trailing" secondItem="454-yU-7wY" secondAttribute="trailing" id="0Qq-DK-jzu"/>
+                            <constraint firstItem="454-yU-7wY" firstAttribute="leading" secondItem="7f4-mw-AFH" secondAttribute="leading" id="8ol-E8-gLY"/>
+                            <constraint firstItem="wmp-Uu-1ix" firstAttribute="top" secondItem="7f4-mw-AFH" secondAttribute="top" id="CK0-Ze-mUK"/>
+                            <constraint firstItem="454-yU-7wY" firstAttribute="top" secondItem="wmp-Uu-1ix" secondAttribute="bottom" id="DAR-aZ-6U2"/>
+                            <constraint firstItem="7f4-mw-AFH" firstAttribute="bottom" secondItem="454-yU-7wY" secondAttribute="bottom" id="NPo-9c-GEw"/>
+                            <constraint firstItem="7f4-mw-AFH" firstAttribute="trailing" secondItem="454-yU-7wY" secondAttribute="trailing" id="ZQ8-bU-7yY"/>
+                            <constraint firstItem="wmp-Uu-1ix" firstAttribute="leading" secondItem="454-yU-7wY" secondAttribute="leading" id="e4X-xh-nbY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7f4-mw-AFH"/>
                     </view>
+                    <navigationItem key="navigationItem" id="NWr-Tq-0SI"/>
+                    <connections>
+                        <outlet property="tableView" destination="454-yU-7wY" id="eGB-2S-KSK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9r-k8-1hp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-90" y="-22"/>
+            <point key="canvasLocation" x="818.84057971014499" y="-22.098214285714285"/>
         </scene>
     </scenes>
 </document>

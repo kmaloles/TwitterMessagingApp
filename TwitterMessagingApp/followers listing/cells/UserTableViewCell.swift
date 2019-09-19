@@ -10,6 +10,10 @@ import UIKit
 
 class UserTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var screenNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +25,13 @@ class UserTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+extension UserTableViewCell {
+    func configure(_ user: User){
+        userImageView.downloaded(from: user.profileImageUrlHttps ?? "")
+        userImageView.asCircle()
+        nameLabel.text = user.name
+        screenNameLabel.text = user.screenName
+    }
 }

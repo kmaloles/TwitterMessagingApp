@@ -23,6 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // Sets navigationBar's background to a blank/empty image
+        UINavigationBar.appearance().setBackgroundImage(UIImage(),
+                                                        for: .default)
+        UINavigationBar.appearance().isTranslucent = true
+        
         TWTRTwitter.sharedInstance().start(withConsumerKey: Constants.key.rawValue, consumerSecret: Constants.secret.rawValue)
         return true
     }
