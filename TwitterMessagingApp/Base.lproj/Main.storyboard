@@ -17,7 +17,30 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igu-sk-wFI">
+                                <rect key="frame" x="160" y="629" width="94" height="30"/>
+                                <state key="normal" title="Get Followers"/>
+                                <connections>
+                                    <action selector="onAuthenticateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v9L-s1-OJ5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="if8-xv-2sY">
+                                <rect key="frame" x="120" y="667" width="175" height="30"/>
+                                <state key="normal" title="Retrieve previous session"/>
+                                <connections>
+                                    <action selector="onRetrieveTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VBW-7c-UdG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="if8-xv-2sY" firstAttribute="top" secondItem="Igu-sk-wFI" secondAttribute="bottom" constant="8" symbolic="YES" id="QfU-pq-3yR"/>
+                            <constraint firstItem="Igu-sk-wFI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zcb-Lx-lvZ"/>
+                            <constraint firstItem="if8-xv-2sY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="j84-GV-MmF"/>
+                            <constraint firstItem="if8-xv-2sY" firstAttribute="centerX" secondItem="Igu-sk-wFI" secondAttribute="centerX" id="ppu-BU-Lgy"/>
+                            <constraint firstItem="Igu-sk-wFI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="585" id="xce-dD-fU3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
