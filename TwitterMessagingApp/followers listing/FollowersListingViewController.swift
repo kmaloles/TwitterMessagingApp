@@ -19,6 +19,7 @@ class FollowersListingViewController: UIViewController {
         }
     }
     var twitterManager = TwitterManager.shared
+    var selectedUser: User?
     
     override func viewDidLoad() {
         initTableView()
@@ -29,6 +30,13 @@ class FollowersListingViewController: UIViewController {
     
     func initTableView(){
         tableView.register(UserTableViewCell.nib(), forCellReuseIdentifier: UserTableViewCell.reuseIdentifier())
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let vc = segue.destination as? ChatViewController else {
+            return
+        }
+        vc.recipient = self.selectedUser
     }
 }
 
@@ -42,6 +50,14 @@ extension FollowersListingViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.reuseIdentifier(), for: indexPath) as! UserTableViewCell
         cell.configure(users[indexPath.row])
         return cell
+    }
+}
+
+extension FollowersListingViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.performSegue(withIdentifier: String(describing: ChatViewController.self), sender: self)
+        self.selectedUser = users[indexPath.row]
     }
 }
 

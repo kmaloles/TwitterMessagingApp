@@ -14,6 +14,7 @@ struct UserResponse: Codable {
 
 struct User: Codable {
     var name: String?
+    var idStr: String?
     var profileImageUrlHttps: String?
     var screenName: String?
 }

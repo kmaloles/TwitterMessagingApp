@@ -17,6 +17,8 @@
 		3C7847642333A12000BF129F /* UIView+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7847632333A12000BF129F /* UIView+Circle.swift */; };
 		3C7847662333A18C00BF129F /* ImageView+URLImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7847652333A18C00BF129F /* ImageView+URLImageLoading.swift */; };
 		3C7847692333A20000BF129F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7847682333A20000BF129F /* User.swift */; };
+		3C98B872233453C300AD6E49 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C98B871233453C300AD6E49 /* ChatViewController.swift */; };
+		3C98B874233453E800AD6E49 /* ChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C98B873233453E800AD6E49 /* ChatViewController.storyboard */; };
 		3CDF10ED23336325007BA74D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDF10EC23336325007BA74D /* AppDelegate.swift */; };
 		3CDF10EF23336325007BA74D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDF10EE23336325007BA74D /* ViewController.swift */; };
 		3CDF10F223336325007BA74D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDF10F023336325007BA74D /* Main.storyboard */; };
@@ -25,6 +27,10 @@
 		3CDF10FA23336327007BA74D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDF10F823336327007BA74D /* LaunchScreen.storyboard */; };
 		3CDF110523336327007BA74D /* TwitterMessagingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDF110423336327007BA74D /* TwitterMessagingAppTests.swift */; };
 		3CDF111023336327007BA74D /* TwitterMessagingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDF110F23336327007BA74D /* TwitterMessagingAppUITests.swift */; };
+		3CF1064623345D590088655D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1064523345D590088655D /* Message.swift */; };
+		3CF1064A23345E960088655D /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1064823345E960088655D /* MessageTableViewCell.swift */; };
+		3CF1064B23345E960088655D /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF1064923345E960088655D /* MessageTableViewCell.xib */; };
+		3CF1064E233461A80088655D /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1064D233461A80088655D /* ChatBubbleView.swift */; };
 		54A027C10CE7CC38B0123DC5 /* Pods_TwitterMessagingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07A15F620AC162E656FA177 /* Pods_TwitterMessagingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +86,8 @@
 		3C7847632333A12000BF129F /* UIView+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Circle.swift"; sourceTree = "<group>"; };
 		3C7847652333A18C00BF129F /* ImageView+URLImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+URLImageLoading.swift"; sourceTree = "<group>"; };
 		3C7847682333A20000BF129F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3C98B871233453C300AD6E49 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		3C98B873233453E800AD6E49 /* ChatViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatViewController.storyboard; sourceTree = "<group>"; };
 		3CDF10E923336325007BA74D /* TwitterMessagingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterMessagingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDF10EC23336325007BA74D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CDF10EE23336325007BA74D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +103,10 @@
 		3CDF110F23336327007BA74D /* TwitterMessagingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterMessagingAppUITests.swift; sourceTree = "<group>"; };
 		3CDF111123336327007BA74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CDF112923337382007BA74D /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = "../../Downloads/Twitter-Kit-iOS/TwitterCore.framework"; sourceTree = "<group>"; };
+		3CF1064523345D590088655D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		3CF1064823345E960088655D /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		3CF1064923345E960088655D /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		3CF1064D233461A80088655D /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
 		B895D8171182FE050B144B0C /* Pods-TwitterMessagingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterMessagingApp.release.xcconfig"; path = "Target Support Files/Pods-TwitterMessagingApp/Pods-TwitterMessagingApp.release.xcconfig"; sourceTree = "<group>"; };
 		D07A15F620AC162E656FA177 /* Pods_TwitterMessagingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterMessagingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -168,8 +180,19 @@
 			isa = PBXGroup;
 			children = (
 				3C7847682333A20000BF129F /* User.swift */,
+				3CF1064523345D590088655D /* Message.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		3C98B870233453B200AD6E49 /* chat */ = {
+			isa = PBXGroup;
+			children = (
+				3CF1064723345E7F0088655D /* cells */,
+				3C98B871233453C300AD6E49 /* ChatViewController.swift */,
+				3C98B873233453E800AD6E49 /* ChatViewController.storyboard */,
+			);
+			path = chat;
 			sourceTree = "<group>";
 		};
 		3CDF10E023336325007BA74D = {
@@ -197,6 +220,8 @@
 		3CDF10EB23336325007BA74D /* TwitterMessagingApp */ = {
 			isa = PBXGroup;
 			children = (
+				3CF1064C2334619A0088655D /* custom */,
+				3C98B870233453B200AD6E49 /* chat */,
 				3C7847672333A1DE00BF129F /* models */,
 				3C78475D2333A09B00BF129F /* extensions */,
 				3C7847532333913D00BF129F /* data */,
@@ -237,6 +262,23 @@
 				D07A15F620AC162E656FA177 /* Pods_TwitterMessagingApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3CF1064723345E7F0088655D /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				3CF1064823345E960088655D /* MessageTableViewCell.swift */,
+				3CF1064923345E960088655D /* MessageTableViewCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		3CF1064C2334619A0088655D /* custom */ = {
+			isa = PBXGroup;
+			children = (
+				3CF1064D233461A80088655D /* ChatBubbleView.swift */,
+			);
+			path = custom;
 			sourceTree = "<group>";
 		};
 		9411A9DF382227D7C2DB78CF /* Pods */ = {
@@ -358,9 +400,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CDF10FA23336327007BA74D /* LaunchScreen.storyboard in Resources */,
+				3C98B874233453E800AD6E49 /* ChatViewController.storyboard in Resources */,
 				3CDF10F723336327007BA74D /* Assets.xcassets in Resources */,
 				3C78474F233385B900BF129F /* FollowersListingViewController.storyboard in Resources */,
 				3CDF10F223336325007BA74D /* Main.storyboard in Resources */,
+				3CF1064B23345E960088655D /* MessageTableViewCell.xib in Resources */,
 				3C78475C23339FCA00BF129F /* UserTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,9 +496,13 @@
 				3C7847572333916E00BF129F /* TwitterManager.swift in Sources */,
 				3C7847622333A0F100BF129F /* Cell+ReuseIdentifiers.swift in Sources */,
 				3CDF10EF23336325007BA74D /* ViewController.swift in Sources */,
+				3CF1064A23345E960088655D /* MessageTableViewCell.swift in Sources */,
 				3C78475B23339FCA00BF129F /* UserTableViewCell.swift in Sources */,
+				3CF1064E233461A80088655D /* ChatBubbleView.swift in Sources */,
 				3C7847602333A0D400BF129F /* UIViewController+StoryboardInstance.swift in Sources */,
+				3CF1064623345D590088655D /* Message.swift in Sources */,
 				3CDF10ED23336325007BA74D /* AppDelegate.swift in Sources */,
+				3C98B872233453C300AD6E49 /* ChatViewController.swift in Sources */,
 				3C7847692333A20000BF129F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

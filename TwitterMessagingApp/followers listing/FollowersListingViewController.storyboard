@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Followers Listing View Controller-->
+        <!--Followers-->
         <scene sceneID="Kad-Bv-i0Q">
             <objects>
-                <viewController storyboardIdentifier="FollowersListingViewController" id="sRL-ng-F15" customClass="FollowersListingViewController" customModule="TwitterMessagingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FollowersListingViewController" title="Followers" id="sRL-ng-F15" customClass="FollowersListingViewController" customModule="TwitterMessagingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i1o-yw-UqL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,33 +27,118 @@
                                     <outlet property="delegate" destination="sRL-ng-F15" id="e1T-9y-dFT"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmp-Uu-1ix">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="a9d-lH-wtE"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wmp-Uu-1ix" firstAttribute="trailing" secondItem="454-yU-7wY" secondAttribute="trailing" id="0Qq-DK-jzu"/>
                             <constraint firstItem="454-yU-7wY" firstAttribute="leading" secondItem="7f4-mw-AFH" secondAttribute="leading" id="8ol-E8-gLY"/>
-                            <constraint firstItem="wmp-Uu-1ix" firstAttribute="top" secondItem="7f4-mw-AFH" secondAttribute="top" id="CK0-Ze-mUK"/>
-                            <constraint firstItem="454-yU-7wY" firstAttribute="top" secondItem="wmp-Uu-1ix" secondAttribute="bottom" id="DAR-aZ-6U2"/>
+                            <constraint firstItem="454-yU-7wY" firstAttribute="top" secondItem="7f4-mw-AFH" secondAttribute="top" id="LZc-JD-vjw"/>
                             <constraint firstItem="7f4-mw-AFH" firstAttribute="bottom" secondItem="454-yU-7wY" secondAttribute="bottom" id="NPo-9c-GEw"/>
                             <constraint firstItem="7f4-mw-AFH" firstAttribute="trailing" secondItem="454-yU-7wY" secondAttribute="trailing" id="ZQ8-bU-7yY"/>
-                            <constraint firstItem="wmp-Uu-1ix" firstAttribute="leading" secondItem="454-yU-7wY" secondAttribute="leading" id="e4X-xh-nbY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7f4-mw-AFH"/>
                     </view>
                     <navigationItem key="navigationItem" id="NWr-Tq-0SI"/>
                     <connections>
                         <outlet property="tableView" destination="454-yU-7wY" id="eGB-2S-KSK"/>
+                        <segue destination="DwT-9j-cuR" kind="show" identifier="ChatViewController" id="pLj-fg-05y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9r-k8-1hp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="818.84057971014499" y="-22.098214285714285"/>
+            <point key="canvasLocation" x="-27655.07246376812" y="101.78571428571428"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="Z92-q3-GTl">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="DwT-9j-cuR" customClass="ChatViewController" customModule="TwitterMessagingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qhN-st-5S7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yis-aU-6xT">
+                                <rect key="frame" x="0.0" y="88" width="414" height="704"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TXE-fF-nAq">
+                                <rect key="frame" x="8" y="792" width="398" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQU-gw-1ze">
+                                        <rect key="frame" x="0.0" y="15" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="gne-SZ-MFa"/>
+                                            <constraint firstAttribute="width" secondItem="OQU-gw-1ze" secondAttribute="height" id="vSr-ha-gzO"/>
+                                        </constraints>
+                                        <state key="normal" image="gallery"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ynR-9w-fX7">
+                                        <rect key="frame" x="50" y="15" width="298" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="qXt-ko-Xrc"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GT-Qq-goC">
+                                        <rect key="frame" x="358" y="16.5" width="40" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="3GT-Qq-goC" secondAttribute="height" multiplier="35:32" id="nj2-OF-z2k"/>
+                                            <constraint firstAttribute="width" constant="40" id="qwK-2J-zcO"/>
+                                        </constraints>
+                                        <state key="normal" image="send_button"/>
+                                        <connections>
+                                            <action selector="onSendButtonTapped:" destination="DwT-9j-cuR" eventType="touchUpInside" id="F4Y-HY-zjW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="yN2-Zl-GRf"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TXE-fF-nAq" firstAttribute="leading" secondItem="BgG-a7-6il" secondAttribute="leading" constant="8" id="62L-zP-cQi"/>
+                            <constraint firstItem="Yis-aU-6xT" firstAttribute="leading" secondItem="BgG-a7-6il" secondAttribute="leading" id="8oV-9R-fhz"/>
+                            <constraint firstItem="TXE-fF-nAq" firstAttribute="top" secondItem="Yis-aU-6xT" secondAttribute="bottom" id="BrI-6f-c9G"/>
+                            <constraint firstItem="BgG-a7-6il" firstAttribute="trailing" secondItem="TXE-fF-nAq" secondAttribute="trailing" constant="8" id="QKS-90-rdd"/>
+                            <constraint firstItem="BgG-a7-6il" firstAttribute="bottom" secondItem="TXE-fF-nAq" secondAttribute="bottom" id="Rdf-gK-JN1"/>
+                            <constraint firstItem="Yis-aU-6xT" firstAttribute="top" secondItem="BgG-a7-6il" secondAttribute="top" id="XFv-lt-bVj"/>
+                            <constraint firstItem="BgG-a7-6il" firstAttribute="trailing" secondItem="Yis-aU-6xT" secondAttribute="trailing" id="vqN-WU-8NV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BgG-a7-6il"/>
+                    </view>
+                    <connections>
+                        <outlet property="chatTextField" destination="ynR-9w-fX7" id="FPA-Jk-JKS"/>
+                        <outlet property="tableView" destination="Yis-aU-6xT" id="bMB-kI-tQ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xuo-el-XOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26697.101449275364" y="101.78571428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aua-FI-CiF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="COj-U3-BCh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d6B-Yt-XWb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sRL-ng-F15" kind="relationship" relationship="rootViewController" id="OM6-Ep-9LH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRZ-Vm-fo2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28565.217391304352" y="101.78571428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gallery" width="50" height="50"/>
+        <image name="send_button" width="64" height="64"/>
+    </resources>
 </document>

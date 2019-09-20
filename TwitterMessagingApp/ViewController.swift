@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     @IBAction func onAuthenticateTapped(_ sender: Any) {
         twitterManager.login { success in
             if success {
-                self.present(FollowersListingViewController.storyboardInstance(), animated: true, completion: nil)
+                self.navigationController?.pushViewController(FollowersListingViewController.storyboardInstance(), animated: true)
             }else{
                 debugPrint("login failed")
             }
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
             guard $0.count > 0 else {
                 return
             }
-            self.present(FollowersListingViewController.storyboardInstance(), animated: true, completion: nil)
+            self.navigationController?.pushViewController(FollowersListingViewController.storyboardInstance(), animated: true)
         }
     }
 

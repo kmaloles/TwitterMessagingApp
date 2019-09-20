@@ -13,10 +13,18 @@ class TwitterManager {
     
     static let shared = TwitterManager()
     
+    
     //TODO: check user session if still logged in at startup
     var isLoggedIn: Bool {
         return TWTRTwitter.sharedInstance().sessionStore.session() != nil
     }
+    
+    var activeSessionUserID: String? {
+        return TWTRTwitter.sharedInstance().sessionStore.session()?.userID
+    }
+    
+    var userName: String?
+    var currentUser: User?
     
     func login(_ callback: @escaping (Bool)->()){
         TWTRTwitter.sharedInstance().logIn {(session, error) in
@@ -25,6 +33,12 @@ class TwitterManager {
                 callback(false)
             }else {
                 debugPrint("logged in user with id \(String(describing: session?.userID))")
+                self.userName = session?.userName
+                //saves current user details
+                var user = User()
+                user.idStr = session?.userID
+                user.name = session?.userName
+                self.currentUser = user
                 callback(true)
             }
         }
@@ -55,7 +69,8 @@ class TwitterManager {
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-//                let jsonObject = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String:Any]
+                let jsonObject = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String:Any]
+                debugPrint(jsonObject)
                 let response = try decoder.decode(UserResponse.self, from: data)
                 callback(response.users ?? [])
             } catch let jsonError as NSError {
